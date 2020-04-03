@@ -13,7 +13,7 @@
 # **II. Homework** #
 ## Create a japanese notebook
 ### Description of the homework ###
-* Create a simple web app that can help user learn Japanese easier.
+* Create a simple web app that can help user learn Japanese easier. (Nguyễn's idea)
 * The web app will have 4 main components. 
     * Search button.
     * Random word button.
