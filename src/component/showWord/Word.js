@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Word.css';
+import EditButton from '../EditButton'
 
 export default class Word extends Component {
   constructor(props) {
@@ -40,6 +41,10 @@ export default class Word extends Component {
             this.state.showImi &&
             <span style={styles.span}>{word.meaning}</span>
           }
+          <EditButton 
+            displayWord = {word}
+            editWord = {this.props.editWord}
+            deleteWord = {this.props.deleteWord}/>
 
         </div>
       </div>
