@@ -91,9 +91,8 @@ class App extends Component {
           editWord = {this.edit}
           deleteWord = {this.delete}/> {/* Tho */}
         <ShowWord 
-          displayWord = {displayWord}
-          showFurigana = {this.state.showFurigana}
-          showMeaning = {this.state.showMeaning}/> {/* Hand + Tu */}
+          dictionary = {this.state.dictionary}
+        />
         <ShowRandomButton /> {/* Nguyen */}
       </div>
     );
