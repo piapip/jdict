@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import FindButton from './component/FindButton'
 import ShowWord from './component/showWord/ShowWord'
 import AddButton from './component/AddButton'
-import EditButton from './component/EditButton'
 import ShowRandomButton from './component/ShowRandomButton'
 
 class App extends Component {
@@ -31,24 +30,39 @@ class App extends Component {
       },
       {
         id: 4,
-        kanji: '犬',
-        furigana: 'inu',
-        meaning: 'dog'
+        kanji: '山',
+        furigana: 'yama',
+        meaning: 'mountain'
+      },
+      {
+        id: 5,
+        kanji: '原',
+        furigana: 'gen',
+        meaning: 'source'
       }
-    ],
-    idGenerator: 5,
-    showFurigana: true,
-    showMeaning: true,
-    displayWordID: 1
+    ]
   }
 
-  edit = (newKanji, newFurigana, newMeaning) => {
+  addWord = (newKanji, newFurigana, newMeaning) => {
+    let dictionary = this.state.dictionary
+    let newID = this.state.dictionary[this.state.dictionary.length-1].id + 1
+    dictionary[dictionary.length] = {
+      id : newID,
+      kanji : newKanji,
+      furigana : newFurigana,
+      meaning : newMeaning
+    }
+    
+    this.setState({ dictionary })
+  }
+
+  edit = (id, newKanji, newFurigana, newMeaning) => {
     let dictionary = this.state.dictionary
     let index = dictionary.findIndex((element) => {
-      return element.id = this.state.displayWordID
+      return element.id === id
     })
     dictionary[index] = {
-      id: this.state.displayWordID,
+      id: id,
       kanji: newKanji,
       furigana: newFurigana,
       meaning: newMeaning
@@ -56,36 +70,32 @@ class App extends Component {
     this.setState({ dictionary })
   }
 
-  delete = () => {
+  delete = (id) => {
     let dictionary = this.state.dictionary
     dictionary = dictionary.filter((element) => {
-      return element.id !== this.state.displayWordID
+      return element.id !== id
     })
     this.setState({ dictionary: dictionary, displayWordID: dictionary[0].id})
   }
 
   render() {
-    var displayWord = this.state.dictionary.find(((element) => {
-      return element.id === this.state.displayWordID
-    }))
-
+    console.log(this.state.dictionary)
     return (
       <div className="App">
         <FindButton
-          dictionary = {this.state.dictionary}
-        /> {/* Nguyen */}
-        <AddButton /> {/* Hung */}
-        <EditButton 
-          displayWord = {displayWord} 
-          editWord = {this.edit}
-          deleteWord = {this.delete}/> {/* Tho */}
+          dictionary = {this.state.dictionary} 
+        /> 
+        <AddButton 
+          addWord = {this.addWord}
+        /> 
         <ShowWord 
-          displayWord = {displayWord}
-          showFurigana = {this.state.showFurigana}
-          showMeaning = {this.state.showMeaning}/> {/* Hand + Tu */}
+          dictionary = {this.state.dictionary}
+          editWord = {this.edit}
+          deleteWord = {this.delete}
+        />
         <ShowRandomButton 
           dictionary = {this.state.dictionary}
-        /> {/* Nguyen */}
+        />
       </div>
     );
   }
