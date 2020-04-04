@@ -82,7 +82,9 @@ class App extends Component {
     console.log(this.state.dictionary)
     return (
       <div className="App">
-        <FindButton /> 
+        <FindButton
+          dictionary = {this.state.dictionary} 
+        /> 
         <AddButton 
           addWord = {this.addWord}
         /> 
@@ -91,7 +93,9 @@ class App extends Component {
           editWord = {this.edit}
           deleteWord = {this.delete}
         />
-        <ShowRandomButton />
+        <ShowRandomButton 
+          dictionary = {this.state.dictionary}
+        />
       </div>
     );
   }

@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.deleteFindResult:hover {
+  background-color: #ccff99;
+}
