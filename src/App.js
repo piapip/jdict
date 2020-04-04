@@ -37,8 +37,8 @@ class App extends Component {
       }
     ],
     idGenerator: 5,
-    showFurigana: true,
-    showMeaning: true,
+    showFurigana: false,
+    showMeaning: false,
     displayWordID: 1
   }
   addWord = (newKanji, newFurigana, newMeaning) => {
