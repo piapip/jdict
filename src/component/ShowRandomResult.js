@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Fade, Card, CardImg, CardTitle, CardSubtitle, CardBody, CardText } from 'reactstrap';
+import { Button, Fade } from 'reactstrap';
 
 const ShowRandomResult = (props) => {
     const [fadeIn, setFadeIn] = useState(false);
