@@ -20,10 +20,9 @@ class ShowFindResult extends Component {
                     <Jumbotron fluid  style={jStyle} className="deleteFindResult">
                         <Container fluid style={dStyle} onClick = {this.props.onDelete} className="deleteFindResult">
                             <h2 className="display-3 ">{this.props.result.kanji}</h2>
-                            <p className="lead">
-                            
-                            Cách đọc: {this.props.result.furigana} <br />
-                            Nghĩa: {this.props.result.meaning}
+                            <p className="lead">  
+                            読み方: {this.props.result.furigana} <br />
+                            意味: {this.props.result.meaning}
                             </p>
                         </Container>
                     </Jumbotron>
