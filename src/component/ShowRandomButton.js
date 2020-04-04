@@ -41,7 +41,6 @@ class ShowRandomButton extends Component {
           <hr />
             <h3>Did you remember? Click "Random" to check</h3>
             <Button color="warning" onClick={this.handleRandom}>Random</Button>
-            {/* {showRandom} */}
           </Col>
 
           <Col sm="4" md={{ size: 6, offset: 3 }}>

@@ -13,32 +13,38 @@ class App extends Component {
       {
         id: 1,
         kanji: '犬',
-        furigana: 'inu',
+        furigana: 'いぬ',
         meaning: 'dog'
       },
       {
         id: 2,
         kanji: '猫',
-        furigana: 'neko',
+        furigana: 'ねこ',
         meaning: 'cat'
       },
       {
         id: 3,
         kanji: '鳥',
-        furigana: 'tori',
+        furigana: 'とり',
         meaning: 'bird'
       },
       {
         id: 4,
         kanji: '山',
-        furigana: 'yama',
+        furigana: 'やま',
         meaning: 'mountain'
       },
       {
         id: 5,
         kanji: '原',
-        furigana: 'gen',
+        furigana: 'げん',
         meaning: 'source'
+      },
+      {
+        id: 6,
+        kanji: '花',
+        furigana: 'はな',
+        meaning: 'flower'
       }
     ]
   }
