@@ -6,7 +6,6 @@ class ShowWord extends Component {
 
   render() {
     const {dictionary} = this.props;
-    console.log(dictionary)
     return (
       <div style={styles.container} className="grid">
         {

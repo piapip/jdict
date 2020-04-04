@@ -40,21 +40,20 @@ class App extends Component {
         furigana: 'gen',
         meaning: 'source'
       }
-    ],
-    idGenerator: 6,
+    ]
   }
 
   addWord = (newKanji, newFurigana, newMeaning) => {
     let dictionary = this.state.dictionary
+    let newID = this.state.dictionary[this.state.dictionary.length-1].id + 1
     dictionary[dictionary.length] = {
-      id : this.state.idGenerator,
+      id : newID,
       kanji : newKanji,
       furigana : newFurigana,
       meaning : newMeaning
     }
-    let idGenerator = this.state.idGenerator + 1
-    this.setState({dictionary, idGenerator})
-    console.log(dictionary)
+    
+    this.setState({ dictionary })
   }
 
   edit = (id, newKanji, newFurigana, newMeaning) => {
@@ -80,6 +79,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.dictionary)
     return (
       <div className="App">
         <FindButton /> 
