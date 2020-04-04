@@ -43,14 +43,14 @@ class App extends Component {
   }
   addWord = (newKanji, newFurigana, newMeaning) => {
     let dictionary = this.state.dictionary
-    let maxID = dictionary[dictionary.length-1].id
     dictionary[dictionary.length] = {
-      id : maxID + 1,
+      id : this.state.idGenerator,
       kanji : newKanji,
       furigana : newFurigana,
       meaning : newMeaning
     }
-    this.setState({dictionary})
+    let idGenerator = this.state.idGenerator + 1
+    this.setState({dictionary, idGenerator})
     console.log(dictionary)
   }
   edit = (newKanji, newFurigana, newMeaning) => {
