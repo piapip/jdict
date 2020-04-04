@@ -3,3 +3,8 @@
     flex: auto;
     padding-left: 2.5%;
 }
+
+.button-show {
+    margin-top: 20px;
+    /*width: 50%;*/
+}
