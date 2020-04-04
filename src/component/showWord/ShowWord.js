@@ -7,7 +7,8 @@ class ShowWord extends Component {
   render() {
     const {dictionary} = this.props;
     return (
-      <div style={styles.container} className="grid">
+      <div style={styles.container} >
+        {/* Hien thi tu o day */}
         {
           dictionary.map((item, index) => {
             return (
@@ -31,9 +32,9 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    marginLeft: '5%',
-    marginRight: '5%',
+    /*justifyContent: 'space-evenly',*/
+    marginLeft: '4%',
+    marginRight: '2%',
     marginTop: 20,
   },
 };

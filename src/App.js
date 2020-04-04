@@ -30,15 +30,15 @@ class App extends Component {
       },
       {
         id: 4,
-        kanji: '山',
-        furigana: 'yama',
-        meaning: 'mountain'
+        kanji: '犬',
+        furigana: 'inu',
+        meaning: 'dog'
       },
       {
         id: 5,
-        kanji: '原',
-        furigana: 'gen',
-        meaning: 'source'
+        kanji: '犬',
+        furigana: 'inu',
+        meaning: 'dog'
       }
     ]
   }
