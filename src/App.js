@@ -41,7 +41,18 @@ class App extends Component {
     showMeaning: true,
     displayWordID: 1
   }
-
+  addWord = (newKanji, newFurigana, newMeaning) => {
+    let dictionary = this.state.dictionary
+    let maxID = dictionary[dictionary.length-1].id
+    dictionary[dictionary.length] = {
+      id : maxID + 1,
+      kanji : newKanji,
+      furigana : newFurigana,
+      meaning : newMeaning
+    }
+    this.setState({dictionary})
+    console.log(dictionary)
+  }
   edit = (newKanji, newFurigana, newMeaning) => {
     let dictionary = this.state.dictionary
     let index = dictionary.findIndex((element) => {
@@ -72,15 +83,16 @@ class App extends Component {
     return (
       <div className="App">
         <FindButton /> {/* Nguyen */}
-        <AddButton /> {/* Hung */}
+        <AddButton 
+          addWord = {this.addWord}
+        /> {/* Hung */}
         <EditButton 
           displayWord = {displayWord} 
           editWord = {this.edit}
           deleteWord = {this.delete}/> {/* Tho */}
         <ShowWord 
-          displayWord = {displayWord}
-          showFurigana = {this.state.showFurigana}
-          showMeaning = {this.state.showMeaning}/> {/* Hand + Tu */}
+          dictionary = {this.state.dictionary}
+        />
         <ShowRandomButton /> {/* Nguyen */}
       </div>
     );
