@@ -37,7 +37,7 @@ class App extends Component {
       {
         id: 5,
         kanji: '原',
-        furigana: 'gen',
+        furigana: 'げん',
         meaning: 'source'
       },
       {
