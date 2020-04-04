@@ -41,7 +41,7 @@ class App extends Component {
         meaning: 'source'
       }
     ],
-    idGenerator: 5,
+    idGenerator: 6,
   }
 
   addWord = (newKanji, newFurigana, newMeaning) => {
