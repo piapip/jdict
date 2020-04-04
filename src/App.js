@@ -71,7 +71,9 @@ class App extends Component {
 
     return (
       <div className="App">
-        <FindButton /> {/* Nguyen */}
+        <FindButton
+          dictionary = {this.state.dictionary}
+        /> {/* Nguyen */}
         <AddButton /> {/* Hung */}
         <EditButton 
           displayWord = {displayWord} 
@@ -81,7 +83,9 @@ class App extends Component {
           displayWord = {displayWord}
           showFurigana = {this.state.showFurigana}
           showMeaning = {this.state.showMeaning}/> {/* Hand + Tu */}
-        <ShowRandomButton /> {/* Nguyen */}
+        <ShowRandomButton 
+          dictionary = {this.state.dictionary}
+        /> {/* Nguyen */}
       </div>
     );
   }
