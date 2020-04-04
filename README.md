@@ -28,7 +28,7 @@
 |No.|Name|Component|
 |---|----|-----|
 |1|Nguyễn Việt Hưng|Add words button|
-|2|Nguyễn Thị Hồng Hạnh|Word display component; Show meaning/show furigana button|
-|3|Nguyễn Văn Tú|Word display component; Show meaning/show furigana button|
+|2|Nguyễn Thị Hồng Hạnh|Show meaning/show furigana button|
+|3|Nguyễn Văn Tú|Word display component|
 |4|Phạm Hữu Thọ|Edit words button(with delete function embedded into it)|
 |5|Vũ Đức Nguyễn|Search button; Random word button|
