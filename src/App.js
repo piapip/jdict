@@ -30,18 +30,18 @@ class App extends Component {
       },
       {
         id: 4,
-        kanji: '竹',
-        furigana: 'たけ',
-        meaning: 'bamboo'
+        kanji: '山',
+        furigana: 'やま',
+        meaning: 'mountain'
       },
       {
         id: 5,
-        kanji: '春',
-        furigana: 'はる',
-        meaning: 'spring'
+        kanji: '原',
+        furigana: 'gen',
+        meaning: 'source'
       },
       {
-        id: 5,
+        id: 6,
         kanji: '花',
         furigana: 'はな',
         meaning: 'flower'
