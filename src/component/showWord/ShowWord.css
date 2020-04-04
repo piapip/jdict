@@ -1,0 +1,5 @@
+.grid:after {
+    content: "";
+    flex: auto;
+    padding-left: 2.5%;
+}
