@@ -51,16 +51,16 @@ class FindButton extends Component {
             <h1>Kanji - Click and Learn</h1>
             <Form>
               <FormGroup row>
-                <Col sm={11}>
+                <Col sm={10}>
                 <Input 
                   type="text" 
                   name="inputword" 
-                  placeholder="Find a word by furigana..."
+                  placeholder="Search a word by hiragana..."
                   value={this.state.findWord}
                   onChange={this.handleChange}
                 ></Input>
                 </Col>
-                <Button color="warning" onClick={this.handleFindWord}>Find</Button>
+                <Button color="warning" onClick={this.handleFindWord}>Search</Button>
               </FormGroup>
             </Form>
             
