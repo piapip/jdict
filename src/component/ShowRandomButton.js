@@ -18,7 +18,6 @@ class ShowRandomButton extends Component {
     
     this.state.randomList.push(this.props.dictionary[random])
     this.setState({randomList: this.state.randomList})
-    console.log(this.state.randomList)
   }
 
   handleDelete = (index) => {

@@ -85,7 +85,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.dictionary)
     return (
       <div className="App">
         <FindButton

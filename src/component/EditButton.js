@@ -37,17 +37,17 @@ const EditButton = (props) => {
           <Form>
             <FormGroup row>
             <Label sm={3}>Kanji</Label>
-              <Col sm={9}><Input type="text" name="kanji" id="taskID" placeholder={displayWord.kanji} onChange={updateInput}></Input></Col>
+              <Col sm={9}><Input type="text" name="kanji" id="taskID" placeholder={displayWord.kanji} onChange={updateInput}>{newWord.kanji}</Input></Col>
             </FormGroup>
 
             <FormGroup row>
             <Label sm={3}>Furigana</Label>
-              <Col sm={9}><Input type="text" name="furigana" id="taskID" placeholder={displayWord.furigana} onChange={updateInput}></Input></Col>
+              <Col sm={9}><Input type="text" name="furigana" id="taskID" placeholder={displayWord.furigana} onChange={updateInput}>{newWord.furigana}</Input></Col>
             </FormGroup>
 
             <FormGroup row>
             <Label sm={3}>Meaning</Label>
-              <Col sm={9}><Input type="text" name="meaning" id="taskID" placeholder={displayWord.meaning} onChange={updateInput}></Input></Col>
+              <Col sm={9}><Input type="text" name="meaning" id="taskID" placeholder={displayWord.meaning} onChange={updateInput}>{newWord.meaning}</Input></Col>
             </FormGroup>
           </Form>
           
